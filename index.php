@@ -2,7 +2,8 @@
 $regexp = '/\d{2}\-0[0-9]{9}/';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $phone = $_GET['phone'];
+    if (isset($_REQUEST['check']))
+        $phone = $_GET['phone'];
 }
 ?>
 <!doctype html>
